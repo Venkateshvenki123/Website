@@ -1,0 +1,131 @@
+.notes-page {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #2d3748;
+}
+
+.notes-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.notes-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #667eea;
+}
+
+.notes-header p {
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.note-card {
+  background: #f7fafc;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.note-card:hover {
+  box-shadow: 0 12px 25px rgba(102, 126, 234, 0.25);
+  cursor: pointer;
+}
+
+.note-info {
+  max-width: 65%;
+}
+
+.note-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.note-description {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.note-uploader {
+  font-size: 0.85rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.note-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-view-pdf,
+.btn-download {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-view-pdf:hover,
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .note-card {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .note-info {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .note-actions {
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn-view-pdf,
+  .btn-download {
+    flex: 1;
+  }
+}
+
+/* Loading and error styles */
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  color: #718096;
+}
